@@ -5,9 +5,21 @@
 
 }
 
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    width: 100px;
+    height: 144px;
+    top: 20px;
+    left: 20px;
+}
+
 nav {
     height: 144px;
-    width: 1440px;
+    width: 100%;
     background-color: #30343F;
     display: flex;
     flex-direction: row;
@@ -50,6 +62,75 @@ a {
     height: 31px;
 }
 
+main {
+    height: 100vh;
+}
+
+.div-banner {
+    height: 468px;
+    width: 100%;
+}
+
+.banner-img {
+    height: 468px;
+    width: 100%;
+    background-image: url(./assets/multimedia/funkos-banner.webp);
+    background-size: cover;
+    background-position: 0% 75%;
+    background-repeat: no-repeat;
+    background-color: #30343F;
+    z-index: 1000;
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-left: 200px;
+    width:80%;
+    height: 468px;
+    color: #fff;
+}
+
+.new-in {
+    width: 350px;
+    height: 45px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.banner-text p {
+    width: 500px;
+    height: 21px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.shop-button {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding: 15px;
+    height: 50px;
+    width: 300px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+
 
 footer {
     display: flex;
@@ -59,16 +140,15 @@ footer {
     flex-direction: column;
     align-items: center;
     margin-top: auto;
-    width: 1440px;
+    width: 100%;
 }
 
 .footer-div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1440px;
-    padding: 60px;
     width: 100%;
+    padding: 60px;
     height: 80px;
 
 }
@@ -96,4 +176,3 @@ footer {
     height: 116.19px;
 
 }
-
