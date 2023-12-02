@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    width: 100px;
+    height: 144px;
+    top: 20px;
+    left: 20px;
+}
+
+nav {
+    height: 144px;
+    width: 100%;
+    background-color: #30343F;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 110px;
+    padding-right: 110px;
+
+}
+
+.nav-options {
+    display: inline;
+
+}
+
+ul {
+    list-style-type: none;
+    color: #fff;
+}
+
+li {
+    margin: 10px;
+    float: left;
+}
+
+a {
+    font-size: 20px;
+    font-family: Raleway;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-logo-img {
+    height: 65.19px;
+    width: 372px;
+}
+
+.nav-cart-img {
+    width: 33px;
+    height: 31px;
+}
+
+main {
+    height: 100vh;
+}
+
+.div-banner {
+    height: 468px;
+    width: 100%;
+}
+
+.banner-img {
+    height: 300px;
+    width: 100%;
+    background-image: url(./multimedia/funkos-banner.webp);
+    background-size: cover;
+    background-position: 0% 75%;
+    background-repeat: no-repeat;
+    background-color: #30343F;
+    z-index: 1000;
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-left: 100px;
+    width:100%;
+    height: 300px;
+    color: #fff;
+}
+
+.new-in {
+    width: 350px;
+    height: 45px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.banner-text p {
+    width: 500px;
+    height: 21px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.shop-button {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding: 15px;
+    height: 50px;
+    width: 300px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+
+
+footer {
+    display: flex;
+    height: 343px;
+    background-color: #30343F;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 60px;
+    height: 80px;
+
+}
+
+.menu {
+    width: 109px;
+    height: 80px;
+    flex-direction: column;
+
+}
+
+.footer-menu,
+.footer-text {
+    color: #fff;
+    font-size: 20px;
+    font-family: Inter;
+    text-decoration: none;
+    padding: 5px;
+
+}
+
+.fotter-img {
+
+    width: 143px;
+    height: 116.19px;
+
+}
