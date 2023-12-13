@@ -6,16 +6,9 @@
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
-
-/* header {
-    /* width: 100px; 
-    height: 144px;
-    top: 20px;
-    left: 20px;
-} */
 
 nav {
     height: 144px;
@@ -25,7 +18,7 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
+    padding: 20px;
 }
 
 .nav-options {
@@ -62,12 +55,11 @@ a {
 
 main {
     position: relative;
-    height: 100%;
-    width:100%;
+    width: 100%;
+    height: auto;
 }
 
 .div-banner {
-    height: 468px;
     width: 100%;
 }
 
@@ -79,16 +71,18 @@ main {
     background-repeat: no-repeat;
     /* background-color: #30343F; */
     z-index: -1000;
-    filter:blur(0.7px);
+    filter: blur(0.7px);
 }
 
 .banner-text {
-    width:100%;
-    position: absolute;
-    top:60px;
-    width:100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
     height: 300px;
     color: #fff;
+    justify-content: center;
+    align-items: start;
+    margin-left: 30px;
 }
 
 .new-in {
@@ -100,7 +94,6 @@ main {
     line-height: 45px;
     letter-spacing: 0em;
     text-align: left;
-    padding-left: 70px;
 }
 
 .banner-text p {
@@ -112,26 +105,159 @@ main {
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
-    padding-left: 70px;
 }
 
 .shop-button {
-    display:flex;
+    display: flex;
     justify-content: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0em;
     text-align: center;
-    padding-left:70px;
     height: 50px;
     width: 300px;
     background-color: #fff;
-    color: #000;
     border-radius: 20px;
     margin-top: 50px;
 }
+
+.button {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button a {
+    color: #000;
+}
+
+.market {
+    min-height: auto;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.card {
+    display: flex;
+    width: 75%;
+    height: 500px;
+    text-align: center;
+    margin: auto;
+}
+
+.text-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    height: 400px;
+    font-family: Raleway;
+    font-size: 46px;
+    font-weight: 500;
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.border {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+    width: 500px;
+    border: 2px;
+    border: 2px solid #FF3333;
+}
+
+.text-card h3 {
+    font-size: 32px;
+    width: 400px;
+}
+
+.text-card p {
+    font-size: 20px;
+    line-height: 30px;
+    width: 350px;
+}
+
+.button-details {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 291.81px;
+    height: 65px;
+    border-radius: 50px;
+    background: #30343F;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.img-card {
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.img-card img {
+    position: relative;
+    display: flex;
+    width: 300px;
+    height: 400px;
+}
+
+.title_last_off{
+    font-family: Raleway;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: left;
+    width:80%;
+    margin: auto;
+    }
+
+.last_off_container{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    text-align: center;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.card-ultLanz{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    width:30%;
+}
+
+
+
+.img-last_off{
+    position: relative;
+    display: flex;
+    width: 150px;
+    height: 200px;
+}
+
+
 
 
 

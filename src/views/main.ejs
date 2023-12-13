@@ -1,33 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+    <%- include("partials/header.ejs")%>
 
-<%- include("partials/header.ejs")%>
-
-<body>
+    <body>
     <main>
         <div class="div-banner">
             <div class="banner-img">
                 <div class="banner-text">
                     <h3 class="new-in">Nuevos Ingresos</h3>
                     <p>Descubrí el próximo Funko Pop de tu colección</p>
-                    <div class="shop-button">
-                    <h3>SHOP</h3>
-                </div>
+                    <div class="button">
+                    <a href="/shop">SHOP</a>
+                    </div>
                 </div>   
             </div>
         </div>
         <div class="market">
+            <% mainFulkon.forEach(element=> { %>
+            <div class="card">
+            <div class="text-card">
+                <h3><%=element.licence_name%></h3>
+                <p><%=element.product_description%></p>
+                <div class="border"></div>
+               <a href="/shop"><div class="button-details">VER COLECCIÓN</div></a>
+            </div>
+                <div class="img-card">
+                <img src="<%=element.img_front%>" alt="<%element.product_name%>">
+                </div>
+            </div>
+            <%})%>
 
+            <h2 class="title_last_off">ULTIMOS LANZAMIENTOS</h2>
 
+            <article class="last_off_container">
+                <% ultLanzArray.forEach(element=> { %>
+                    <div class="img-last_off">
+                        <img src="<%=element.img_front%>" alt="<%element.product_name%>">
+                    </div>
+                    <%})%>
+    
+            </article>
+
+  
         </div>
+
     </main>
+
+    <%- include("partials/footer.ejs")%>
  
-
     <script src="/index.js"></script>
-
 </body>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500&display=swap" rel="stylesheet">
+
+
+
 
 </html>

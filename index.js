@@ -6,6 +6,8 @@ import shopRoutes from "./src/routes/shopRoutes.js"
 import adminRoutes from "./src/routes/adminRoutes.js"
 import authRoutes from "./src/routes/authRoutes.js"
 
+
+
 dotenv.config();
 
 const app= express();
