@@ -8,9 +8,7 @@ const router= express.Router();
 router.get("/shop", shopControllers.shopView)
 router.get("/shop/:id", shopControllers.itemView)
 
-router.get("/shop/car", (req,res)=>{
-    res.send("ESTAS EN SHOP-CAR")
-})
+router.get("/shop/:id/car",shopControllers.carView)
 
 router.post("/shop/car", (req,res)=>{
     res.send("ESTAS EN SHOP-CAR ADD ITEM")

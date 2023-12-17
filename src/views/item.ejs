@@ -409,8 +409,25 @@ cursor: pointer;
 /* box-shadow: 3px 2px 5px; */
 }
 
+/* ITEM */
+.add_car{
+    display:flex;
+    column-gap: 20px;
+    width:300px;
+}
+.add_car input{
+width:70px;
 
-
+}
+.add_car button{
+    background-color: #FF3333;
+    color: #fff;
+    width:200px;
+    height: 50px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 400;
+}
 
 footer {
     display: flex;
@@ -465,12 +482,24 @@ footer {
                         <div class="img-card">
                             <img src="<%=item.img_front%>" alt="<%item.product_name%>">
                             <div class="text-card">
+                                <p>
+                                    <%=item.collection_name%>
+                                </p>
                                 <h3>
                                     <%=item.licence_name%>
                                 </h3>
                                 <p>
                                     <%=item.product_description%>
                                 </p>
+                                <h3>
+                                    $<%=item.product_price%>
+                                </h3>
+                                <div class="add_car">
+                                    <input type="number" name="" id="">
+                                   <a href="/shop/<%=item.product_id%>/car"><button type="button">Agregar al carrito</button></a> 
+                                </div>
+
+
                         </div>
                     </div>
                 </div>
