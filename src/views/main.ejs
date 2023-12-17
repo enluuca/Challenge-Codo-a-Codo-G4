@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("partials/header.ejs")%>
+   
+    <%- include("partials/head.ejs")%>
 
     <body>
     <main>
@@ -36,8 +37,17 @@
                 <% ultLanzArray.forEach(element=> { %>
                     <div class="img-last_off">
                         <img src="<%=element.img_front%>" alt="<%element.product_name%>">
+                        <!-- <img src="<%=element.img_back%>" alt="<%element.product_name%>" class="hidden"> -->
+                        <div class="text_off_container">
+                            <p><%=element.collection_name%></p>
+                            <h3><%=element.licence_name%></h3>
+                            <p>$<%=element.product_price%></p>
+                            <h6>3 CUOTAS SIN INTERES</h6>
+                        </div>
                     </div>
+                    <div class="new">NUEVO</div>
                     <%})%>
+                  
     
             </article>
 
@@ -47,8 +57,10 @@
     </main>
 
     <%- include("partials/footer.ejs")%>
+
  
     <script src="/index.js"></script>
+  
 </body>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

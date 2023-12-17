@@ -4,12 +4,10 @@ import mainControllers from "../controllers/mainControllers.js"
 
 const router= express.Router();
 
-console.log(resolve());
-
 router.get("/", mainControllers);
 
 router.get("/contact", (req,res)=>{
-    res.send("ESTAS EN CONTACTO")
+    res.render(resolve() + "/src/views/contact.ejs")
 })
 
 router.get("/about", (req,res)=>{

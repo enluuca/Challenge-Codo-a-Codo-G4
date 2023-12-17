@@ -4,8 +4,6 @@ import {resolve} from "path"
 
 const router= express.Router();
 
-console.log(resolve());
-
 router.get("/admin", (_,res )=>{
     res.send("ESTAS EN ADMIN")
 })

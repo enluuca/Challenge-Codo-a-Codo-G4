@@ -4,7 +4,6 @@ import {resolve} from "path"
 
 const router= express.Router();
 
-console.log(resolve());
 
 router.get("/auth/login", (_,res )=>{
     res.send("ESTAS EN AUTH LOGIN")

@@ -2,7 +2,6 @@ import {resolve} from "path";
 import fs from "fs"
 const funkosJSON = JSON.parse(fs.readFileSync("./src/data/data.js", "utf-8"));
 
-
 let mainFulkon=[]
 let ultLanzArray=[]
 
@@ -19,12 +18,11 @@ funkosJSON.forEach(element => {
         }
     });
 
-// console.log(mainFulkon)
-console.log(ultLanzArray)
-
 const mainControllers=(req, res)=>{
 
-    res.render(resolve() + "/src/views/main.ejs", {mainFulkon, ultLanzArray})
+ res.render(resolve() + "/src/views/main.ejs", {mainFulkon, ultLanzArray})
+    
+
 }
 
 export default mainControllers;

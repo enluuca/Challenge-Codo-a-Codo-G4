@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("partials/head.ejs")%>
+    <meta http-equiv="Content-Type" content="text/css">
+    <title>FunkoShop</title>
+</head>
+
+<style> 
+
 * {
     margin: 0;
     padding: 0;
@@ -264,24 +277,10 @@ main {
     height: 300px;
 }
 
-.img-last_off:hover{
+.img-last_of:hover{
     cursor: pointer;
 
 }
-
-.hidden{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 200px;
-    visibility: hidden;
-}
-
-.hidden:hover{
-    visibility: visible;
-}
-
 
 .new {
     display: flex;
@@ -410,6 +409,9 @@ cursor: pointer;
 /* box-shadow: 3px 2px 5px; */
 }
 
+
+
+
 footer {
     display: flex;
     height: 343px;
@@ -454,3 +456,58 @@ footer {
     height: 116.19px;
 
 }
+    
+    </style>
+
+    <body>
+        <main>
+                <div style="display:flex; justify-content:center; align-items: center;">
+                        <div class="img-card">
+                            <img src="<%=item.img_front%>" alt="<%item.product_name%>">
+                            <div class="text-card">
+                                <h3>
+                                    <%=item.licence_name%>
+                                </h3>
+                                <p>
+                                    <%=item.product_description%>
+                                </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            <h2 class="title_last_off">ULTIMOS LANZAMIENTOS</h2>
+
+            <article class="last_off_container">
+                <% ultLanzArray.forEach(element=> { %>
+                    <div class="img-last_off">
+                        <img src="<%=element.img_front%>" alt="<%element.product_name%>">
+                        <img src="<%=element.img_back%>" alt="<%element.product_name%>" class="hidden">
+                        <div class="text_off_container">
+                            <p>
+                                <%=element.collection_name%>
+                            </p>
+                            <h3>
+                                <%=element.licence_name%>
+                            </h3>
+                            <p>$<%=element.product_price%>
+                            </p>
+                            <h6>3 CUOTAS SIN INTERES</h6>
+                        </div>
+                    </div>
+                    <div class="new">NUEVO</div>
+                    <%})%>
+
+            </article>
+        </main>
+
+        <%- include("partials/footer.ejs")%>
+
+        <script src="/index.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500&display=swap" rel="stylesheet">
+
+    </body>
+
+</html>

@@ -1,31 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include("partials/head.ejs")%>
+    <title>FunkoShop</title>
 </head>
 
 <body>
+
+        <main>
+
+            <div class="shop_container">
+
+                <div class="search">
+                    <div class="search_input">
+                        <h3>BUSCAR</h3>
+                        <input type="text">
+                    </div>
+                    <div class="sort_input">
+                        <h3>ORDENAR POR</h3>
+                        <select name="type" id="type">
+                            <option value=""></option>
+                            <option value="collection">COLECCIÓN</option>
+                            <option value="category">CATEGORIA</option>
+                          </select>
+                    </div>
+                    <div class="price_input">
+                        <h3>PRECIO</h3>
+                        <div class="min_max_price"> 
+                            <h5>MIN</h5>
+                            <input type="text">
+                            <h5>MAX</h5>
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                        <div class="filter">
+                            <h3>FILTRAR</h3>
+                            <input type="checkbox" name="checkbox" id="new">
+                            <input type="checkbox" name="checkbox" id="off">
+                                <li>OFERTAS</li>
+                                <li>EDICIÓN ESPECIAL</li>
+                                <li>FAVORITOS</li>
+                            </ul>
+                        </div>
+                    </div>
     
-<%- include("partials/header.ejs")%>
 
-<main>
+                <article class="shop_cards">
+                    <% funkosJSON.forEach(element=> { %>
+                       <a href="/shop/<%=element.product_id%>"><div class="shop_img" id="card">
+                            <img src="<%=element.img_front%>" alt="<%element.product_name%>">
+                            <div class="text_off_container">
+                                <p>
+                                    <%=element.collection_name%>
+                                </p>
+                                <h3>
+                                    <%=element.licence_name%>
+                                </h3>
+                                <p>$<%=element.product_price%>
+                                </p>
+                                <h6>3 CUOTAS SIN INTERES</h6>
+                            </div>
+                        </div></a>
+                        <div class="new">NUEVO</div>
+                        <%})%>
 
-    <h3>ESTAS EN SHOP</h3>
+                </article>
 
-
-    <div>
-
-
-        
-    </div>
-</main>
+            </div>
+        </main>
 
 
 
 
-<%- include("partials/footer.ejs")%>
+        <%- include("partials/footer.ejs")%>
 
 </body>
+
 </html>

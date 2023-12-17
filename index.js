@@ -15,8 +15,8 @@ const app= express();
 
 // VIEW ENGINE SETUP
 
-// app.set("views", path.join(path.resolve(), "views") )
-// app.set("view engine", "ejs")
+app.set("views", path.join(path.resolve(), "views") )
+app.set("view engine", "ejs")
 
 app.use(express.static("public"));
 
@@ -39,9 +39,8 @@ app.use("/", authRoutes)
 app.use((req, res, next) => {
     res.status(404).send('Recurso no encontrado');
    });
-   
 
+   
 app.listen(PORT, ()=>{
     console.log(`El puerto está funcionando en http://localhost:${PORT}`)
 })
-
