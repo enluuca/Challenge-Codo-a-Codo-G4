@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+    <%- include("partials/header.ejs")%>
         <main>
 
             <div class="shop_container">
@@ -17,7 +17,7 @@
                 <div class="search">
                     <div class="search_input">
                         <h3>BUSCAR</h3>
-                        <input type="text" class="input_search">
+                        <input type="search" class="input_search" id="input_search" placeholder="Search...">
                     </div>
                     <div class="sort_input">
                         <h3>ORDENAR POR</h3>
@@ -50,7 +50,8 @@
 
                 <article class="shop_cards">
                     <% funkosJSON.forEach(element=> { %>
-                       <a href="/shop/<%=element.product_id%>"><div class="shop_img" id="card">
+                       <a href="/shop/<%=element.product_id%>">
+                        <div class="shop_img" id="card">
                             <img src="<%=element.img_front%>" alt="<%element.product_name%>">
                             <div class="text_off_container">
                                 <p>
@@ -63,10 +64,10 @@
                                 </p>
                                 <h6>3 CUOTAS SIN INTERES</h6>
                             </div>
-                        </div></a>
+                        </div>
+                        </a>
                         <div class="new">NUEVO</div>
                         <%})%>
-
                 </article>
 
             </div>
@@ -74,8 +75,9 @@
 
 
         <%- include("partials/footer.ejs")%>
-        <script src="/public/shop.js"></script>
 
+        <script src="/shop.js"></script>
+    
 </body>
 
 </html>

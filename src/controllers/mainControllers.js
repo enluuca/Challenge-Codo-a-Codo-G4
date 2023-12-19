@@ -20,7 +20,7 @@ funkosJSON.forEach(element => {
 
 const mainControllers=(req, res)=>{
 
- res.render(resolve() + "/src/views/main.ejs", {mainFulkon, ultLanzArray})
+ res.render(resolve() + "/src/views/main.ejs", {mainFulkon, ultLanzArray,funkosJSON})
     
 
 }

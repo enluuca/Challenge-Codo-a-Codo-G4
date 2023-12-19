@@ -1,483 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%- include("partials/head.ejs")%>
-    <meta http-equiv="Content-Type" content="text/css">
-    <title>FunkoShop</title>
-</head>
-
-<style> 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
-body {
-    width: 100%;
-    height: 100vh;
-}
-
-nav {
-    height: 144px;
-    width: 100%;
-    background-color: #30343F;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.nav-options {
-    display: inline;
-
-}
-
-ul {
-    list-style-type: none;
-    color: #fff;
-}
-
-li {
-    margin: 10px;
-    float: left;
-    border-radius: 2px;
-}
-
-ul > li:hover{
-    background-color: #FF3333;
-    cursor: pointer;
-}
-
-a {
-    font-size: 20px;
-    font-family: Raleway;
-    color: #fff;
-    text-decoration: none;
-}
-
-.nav-logo-img {
-    height: 65.19px;
-    width: 372px;
-}
-
-.nav-cart-img {
-    width: 33px;
-    height: 31px;
-}
-
-main {
-    position: relative;
-    width: 100%;
-    height: auto;
-}
-
-.div-banner {
-    width: 100%;
-}
-
-.banner-img {
-    height: 300px;
-    background-image: url(./multimedia/funkos-banner.webp);
-    background-size: cover;
-    background-position: 0% 75%;
-    background-repeat: no-repeat;
-    /* background-color: #30343F; */
-    z-index: -1000;
-    filter: blur(0.7px);
-}
-
-.banner-text {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    height: 300px;
-    color: #fff;
-    justify-content: center;
-    align-items: start;
-    margin-left: 30px;
-}
-
-.new-in {
-    width: 350px;
-    height: 45px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 45px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-
-.banner-text p {
-    width: 500px;
-    height: 21px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 21px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-
-.shop-button {
-    display: flex;
-    justify-content: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: center;
-    height: 50px;
-    width: 300px;
-    background-color: #fff;
-    border-radius: 20px;
-    margin-top: 50px;
-}
-
-.button {
-    display: flex;
-    width: 200px;
-    height: 50px;
-    border-radius: 10px;
-    background-color: #fff;
-    color: #000;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.button a {
-    color: #000;
-}
-
-.market {
-    min-height: auto;
-    color: #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-.card {
-    display: flex;
-    width: 75%;
-    height: 500px;
-    text-align: center;
-    margin: auto;
-}
-
-.text-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 45%;
-    height: 400px;
-    font-family: Raleway;
-    font-size: 46px;
-    font-weight: 500;
-    line-height: 54px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-
-.border {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0px 20px 0px;
-    width: 500px;
-    border: 2px;
-    border: 2px solid #FF3333;
-}
-
-.text-card h3 {
-    font-size: 32px;
-    width: 400px;
-}
-
-.text-card p {
-    font-size: 20px;
-    line-height: 30px;
-    width: 350px;
-}
-
-.button-details {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 291.81px;
-    height: 65px;
-    border-radius: 50px;
-    background: #30343F;
-    color: #fff;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 29px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-
-.img-card {
-    width: 45%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.img-card img {
-    position: relative;
-    display: flex;
-    width: 300px;
-    height: 400px;
-}
-
-
-
-.title_last_off {
-    font-family: Raleway;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 54px;
-    letter-spacing: 0em;
-    text-align: left;
-    width: 80%;
-    margin: auto;
-}
-
-.last_off_container {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    text-align: center;
-    justify-content: space-evenly;
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-.card-ultLanz {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-}
-
-.img-last_off {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 300px;
-}
-
-.img-last_of:hover{
-    cursor: pointer;
-
-}
-
-.new {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FF3333;
-    color: #fff;
-    height: 30px;
-    width: 80px;
-    font-weight: 800;
-}
-
-.text_off_container {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    width: 200px;
-}
-
-.text_off_container p {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 17px;
-    letter-spacing: 0em;
-    color: #333333;
-}
-
-.text_off_container h3 {
-    font-family: Inter;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 22px;
-    letter-spacing: 0em;
-}
-
-.text_off_container h6 {
-    font-family: Inter;
-    font-size: 10px;
-    font-weight: 700;
-    line-height: 14.52px;
-    letter-spacing: 0em;
-    color: #1D84B5;
-}
-
-
-/* SHOP   */
-.shop_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 50px;
-    column-gap: 30px;
-}
-
-.search {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    padding: 30px;
-    height: 493.93px;
-    row-gap: 30px;
-}
-
-.search input {
-    position: relative;
-    height: 30px;
-    width: 100%;
-    border-radius: 6px;
-
-}
-
-.sort_input select{
-    width:100%;
-    height: 30px;
-    border-radius: 6px;
-}
-
-.price_input{
-   display: flex;
-   flex-direction: column;
-   row-gap: 20px;
-  
-}
-
-.price_input input{
-    width:20%;
-}
-    
-.min_max_price{
-    display: flex;
-    column-gap: 20px;
-}
-
-.filter{
-    display:flex;
-    flex-direction: column;
-}
-
-.filter ul{
-    color: black;
-    display: flex;
-    flex-direction: column;
-}
-
-
-.shop_cards {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-    flex-wrap: wrap;
-}
-
-.shop_img {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 300px;
-    margin-bottom: 30px;
-}
-
-.shop_img:hover{
-cursor: pointer;
-/* box-shadow: 3px 2px 5px; */
-}
-
-/* ITEM */
-.add_car{
-    display:flex;
-    column-gap: 20px;
-    width:300px;
-}
-.add_car input{
-width:70px;
-
-}
-.add_car button{
-    background-color: #FF3333;
-    color: #fff;
-    width:200px;
-    height: 50px;
-    border-radius: 3px;
-    font-size: 16px;
-    font-weight: 400;
-}
-
-footer {
-    display: flex;
-    height: 343px;
-    background-color: #30343F;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    margin-top: auto;
-    width: 100%;
-}
-
-.footer-div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 60px;
-    height: 80px;
-
-}
-
-.menu {
-    width: 109px;
-    height: 80px;
-    flex-direction: column;
-
-}
-
-.footer-menu,
-.footer-text {
-    color: #fff;
-    font-size: 20px;
-    font-family: Inter;
-    text-decoration: none;
-    padding: 5px;
-
-}
-
-.fotter-img {
-
-    width: 143px;
-    height: 116.19px;
-
-}
-    
-    </style>
 
     <body>
+        <%- include("partials/header.ejs")%>
         <main>
+            <div class="market">
                 <div style="display:flex; justify-content:center; align-items: center;">
                         <div class="img-card">
                             <img src="<%=item.img_front%>" alt="<%item.product_name%>">
@@ -494,45 +22,63 @@ footer {
                                 <h3>
                                     $<%=item.product_price%>
                                 </h3>
-                                <div class="add_car">
-                                    <input type="number" name="" id="">
-                                   <a href="/shop/<%=item.product_id%>/car"><button type="button">Agregar al carrito</button></a> 
+                                <div class="button_add_subtract">
+                                    <button id="button_subtract" class="button_subtract">-</button>
+                                    <input type="text" id="valueNum" placeholder="0">
+                                    <button id="button_add" class="button_add">+</button>
+                                    <div>
+                                       <button type="button" class="add_car"><a href="/shop/<%=item.product_id%>/car">Agregar al carrito</a></button> 
+                                    </div>
                                 </div>
-
-
                         </div>
                     </div>
                 </div>
 
 
-            <h2 class="title_last_off">ULTIMOS LANZAMIENTOS</h2>
+            <h2 class="title_last_off">PRODUCTOS RELACIONADOS</h2>
 
-            <article class="last_off_container">
-                <% ultLanzArray.forEach(element=> { %>
-                    <div class="img-last_off">
-                        <img src="<%=element.img_front%>" alt="<%element.product_name%>">
-                        <img src="<%=element.img_back%>" alt="<%element.product_name%>" class="hidden">
-                        <div class="text_off_container">
-                            <p>
-                                <%=element.collection_name%>
-                            </p>
-                            <h3>
-                                <%=element.licence_name%>
-                            </h3>
-                            <p>$<%=element.product_price%>
-                            </p>
-                            <h6>3 CUOTAS SIN INTERES</h6>
-                        </div>
-                    </div>
-                    <div class="new">NUEVO</div>
-                    <%})%>
-
+            <article class="last_off_container glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <% funkosJSON.forEach(element=> { %>
+                            <li class="glide__slide card-ultLanz">
+                                <div class="new">NUEVO</div>
+                                <img src="<%=element.img_front%>" alt="<%element.product_name%>"
+                                    class="img-last_off ">
+                                <div class="text_off_container">
+                                    <p>
+                                        <%=element.collection_name%>
+                                    </p>
+                                    <h3>
+                                        <%=element.licence_name%>
+                                    </h3>
+                                    <p>$<%=element.product_price%>
+                                    </p>
+                                    <h6>3 CUOTAS SIN INTERES</h6>
+                                </div>
+                            </li>
+                            <%})%>
+                    </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i
+                            class="bi bi-arrow-left-circle" style="color:black"></i></button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i
+                            class="bi bi-arrow-right-circle" style="color:black"></i></button>
+                </div>
             </article>
+        </div>
         </main>
 
         <%- include("partials/footer.ejs")%>
 
-        <script src="/index.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+        <script src="/glide.js"></script>
+        <script src="/item.js"></script>
+
+     
+    
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500&display=swap" rel="stylesheet">
