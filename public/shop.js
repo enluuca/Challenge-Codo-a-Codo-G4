@@ -2,13 +2,12 @@ const button_search= document.getElementById("input_search")
 
 console.log(button_search);
 
-// let array=["STORMTROOPER LIGHTSABER","LUKE","BOBBA FETT", "HARRY POTTER", "HERMIONE"]
-// console.log(array.length)
+let array=["STORMTROOPER LIGHTSABER","LUKE","BOBBA FETT", "HARRY POTTER", "HERMIONE"]
+console.log(array.length)
 
 let array2=[];
 
-export const search2 = function search(button, array){
-    button.addEventListener("keyup",(e)=>{
+    button_search.addEventListener("keyup",(e)=>{
         const letra=e.target.value;
         console.log(letra)
     
@@ -23,7 +22,6 @@ export const search2 = function search(button, array){
         array2=[];
     })
 
-}
 
 
 

@@ -12,6 +12,7 @@ const shopControllers={
 
 itemView:(req,res)=>{
     
+    
     let id=req.params.id;
     console.log(id)
 

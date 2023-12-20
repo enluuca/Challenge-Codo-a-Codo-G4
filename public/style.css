@@ -160,7 +160,7 @@ main {
     margin:auto;
 }
 
-.card {
+.card-main {
     display: grid;
     grid-template-columns:repeat(2, 1fr);
     height: 500px;
@@ -169,7 +169,7 @@ main {
     margin: auto;
 }
 
-.card:nth-child(2) .img-card{
+.card-main:nth-child(2) .img-card{
     order:-1;
 }
 
@@ -257,14 +257,14 @@ main {
     margin-bottom: 40px;
 }
 
-.card-ultLanz {
+.card_ultLanz {
     position: relative;
     display: flex;
     flex-direction: column;
     width: 20%;
 }
 
-.img-last_off {
+.img_last_off {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -272,7 +272,7 @@ main {
     height: 300px;
 }
 
-.img-last_off:hover{
+.img_last_off:hover{
     cursor: pointer;
 
 }
@@ -335,11 +335,11 @@ main {
 }
 
 .glide__arrow--left{
-    left:0
+    left:0;
 }
 
 .glide__arrow--right{
-    right:0;
+    right:6;
 }
 
 
@@ -352,7 +352,7 @@ main {
     column-gap: 30px;
 }
 
-.search {
+.search_shop{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -362,7 +362,7 @@ main {
     row-gap: 30px;
 }
 
-.search input {
+.search_shop input {
     position: relative;
     height: 30px;
     width: 100%;
@@ -458,6 +458,15 @@ cursor: pointer;
     height: 40px;
     border-radius: 7px;
 }
+
+/*************** AUTH ******************/
+
+.card{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+
 
 footer {
     display: flex;

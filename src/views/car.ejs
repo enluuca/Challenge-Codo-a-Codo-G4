@@ -1,16 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("partials/head.ejs")%>
+<%- include("partials/head.ejs")%>
 
     <body>
         <%- include("partials/header.ejs")%>
+            <main>
 
-    <main>
-        <h2>HOLA ESTAS EN CAR</h2>
-        </main>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card shopping-cart">
+                                <div class="card-header bg-dark text-light">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    Carrito de compras
+                                    <a href="" class="btn btn-outline-info btn-sm pull-right">Continuar comprando</a>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="card-body">
+                                    <!-- PRODUCT -->
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-2 text-center">
+                                            <img class="img-responsive" src="" alt="prewiew" width="120" height="80">
+                                        </div>
+                                        <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+                                            <h4 class="product-name"><strong>Producto 1</strong></h4>
+                                            <h4>
+                                                <small>Descripción del producto</small>
+                                            </h4>
+                                        </div>
+                                        <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+                                            <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+                                                <h6><strong>$100.00 <span class="text-muted">x</span></strong></h6>
+                                            </div>
+                                            <div class="col-4 col-sm-4 col-md-4">
+                                                <div class="">
+                                                    <div class="button_add_subtract">
+                                                        <button id="button_subtract" class="button_subtract">-</button>
+                                                        <input type="text" id="valueNum" placeholder="0">
+                                                        <button id="button_add" class="button_add">+</button>
+                                                        <div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <!-- END PRODUCT -->
+                                </div>
+                                <div class="card-footer">
+                                    <div class="pull-right" style="margin: 10px">
+                                        <a href="" class="btn btn-danger pull-right">Comprar</a>
+                                        <div class="pull-right" style="margin: 5px">
+                                            Total: <b>$150.00</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
 
-        <%- include("partials/footer.ejs")%>
+            <%- include("partials/footer.ejs")%>
 
-        <script src="/index.js"></script>
+                <script src="/index.js"></script>
     </body>
+
 </html>

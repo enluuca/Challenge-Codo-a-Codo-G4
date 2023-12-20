@@ -20,7 +20,7 @@
                 </div>
                 <div class="market">
                     <% mainFulkon.forEach(element=> { %>
-                        <div class="card">
+                        <div class="card-main">
                             <div class="text-card">
                                 <h3>
                                     <%=element.licence_name%>
@@ -45,10 +45,10 @@
                                 <div class="glide__track" data-glide-el="track">
                                     <ul class="glide__slides">
                                         <% funkosJSON.forEach(element=> { %>
-                                            <li class="glide__slide card-ultLanz">
+                                            <li class="glide__slide card_ultLanz">
                                                 <div class="new">NUEVO</div>
                                                 <img src="<%=element.img_front%>" alt="<%element.product_name%>"
-                                                    class="img-last_off ">
+                                                    class="img_last_off ">
                                                 <div class="text_off_container">
                                                     <p>
                                                         <%=element.collection_name%>
@@ -65,10 +65,10 @@
                                     </ul>
                                 </div>
                                 <div class="glide__arrows" data-glide-el="controls">
-                                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i
-                                            class="bi bi-arrow-left-circle" style="color:black"></i></button>
+                                    <button class="glide__arrow glide__arrow--left" style="color:black" data-glide-dir="<"><i
+                                            class="bi bi-arrow-left-circle"></i></button>
                                     <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i
-                                            class="bi bi-arrow-right-circle" style="color:black"></i></button>
+                                            class="bi bi-arrow-right-circle"></i></button>
                                 </div>
                             </article>
                 </div>
